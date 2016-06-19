@@ -44,6 +44,8 @@ public @interface Column {
 
 	public ForeignKeyAction onUpdate() default ForeignKeyAction.NO_ACTION;
 
+	public boolean isCascade() default false;
+
 	public boolean unique() default false;
 
 	public ConflictAction onUniqueConflict() default ConflictAction.FAIL;
